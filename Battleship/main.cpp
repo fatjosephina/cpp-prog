@@ -57,7 +57,6 @@ void checkIfShipFound(int game[8][8], int gameboardDiscoveredSoFar[8][8], int i,
         {
             if (gameboardDiscoveredSoFar[i][j] != game[i][j])
             {
-                //cout << "Ship nearly found at (" << i << ", " << j << "). \n";
                 gameboardDiscoveredSoFar[i][j] = game[i][j];
                 checkIfShipFound(game, gameboardDiscoveredSoFar, i + 1, j, shipsFound, ships);
                 checkIfShipFound(game, gameboardDiscoveredSoFar, i, j + 1, shipsFound, ships);
@@ -69,7 +68,6 @@ void checkIfShipFound(int game[8][8], int gameboardDiscoveredSoFar[8][8], int i,
         {
             if (gameboardDiscoveredSoFar[i][j] != game[i][j])
             {
-                //cout << "Ship not found at (" << i << ", " << j << "). \n";
                 gameboardDiscoveredSoFar[i][j] = game[i][j];
             }
         }
